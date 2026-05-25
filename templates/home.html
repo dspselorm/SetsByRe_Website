@@ -1,0 +1,919 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+   
+<!-- Hero Section -->
+    <section id="hero" data-nav-section="hero" class="hero section dark-background" data-aos="zoom-out">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1>Perfect set designs just for your occasions!</h1>
+            <p>We are a team of talented set designers building unique and memorable set designs for all your special events.</p>
+            <div class="d-flex">
+              <a href="#about" class="btn-get-started">Get Started</a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>CEO's Message</span></a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img">
+            <img src="{% static 'assets/img/s6.png' %}" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" data-nav-section="hero" class="clients section light-background" data-aos="zoom-in">
+
+      <div class="container">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 120
+                },
+                "1200": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_1.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_2.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_3.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_4.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_5.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_6.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_7.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_8.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_9.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_10.webp' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client_11.webp' %}" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- About Section -->
+    <section id="about" data-nav-section="about" class="about section" data-aos="fade-up">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>About Us</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content">
+            <p>
+              At SetsByRe, we bring creative visions to life through thoughtful and immersive set design. From intimate celebrations to large-scale productions, we specialize in transforming spaces into visually captivating experiences that leave lasting impressions. 
+            </p>
+            <p>
+              Some of our key services include: 
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>Indoor Set Design (Interior Decor)</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Outdoor Set Design (Exterior Decor)</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Event Planning</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Backdrop Design and Setup</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <p>
+              Our work blends creativity, detail, and functionality to create environments that reflect each client’s unique story and purpose. Whether it’s weddings, corporate events, stage productions, photoshoots, or brand activations, we approach every project with originality and precision.
+            </p>
+            <p>
+              We believe that every space has the potential to inspire. That’s why we focus on creating designs that are not only visually striking, but also memorable, elegant, and tailored to each occasion.
+            </p>
+            <p>
+              At SetsByRe, design is more than decoration — it’s an experience.
+            </p>
+            {% comment %} <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a> {% endcomment %}
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" data-nav-section="about" class="section why-us light-background" data-builder="section" data-aos="fade-up">
+
+      <div class="container-fluid">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+            <div class="content px-xl-5">
+              <h3><span>Why should you choose </span> <strong>SetsByRe</strong>?</h3>
+              <p>
+                At SetsByRe, we arenot just about creating beautiful set designs; we are about crafting unforgettable experiences. Our team is passionate about transforming ideas into visually stunning spaces, with careful attention to detail and a strong commitment to quality. Every project is uniquely tailored to reflect our clients’ vision, ensuring each event leaves a lasting impression.
+              </p>
+            </div>
+
+            <div class="faq-container px-xl-5">
+              <div class="faq-scroll-box">
+
+                <div class="faq-item faq-active">
+                  <h3><span>01</span> What services does SetsByRe offer?</h3>
+                  <div class="faq-content">
+                    <p>We specialize in creative set design and event styling for weddings, corporate events, stage productions, photoshoots, brand activations, and special occasions.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span>02</span> How early should I book your services?</h3>
+                  <div class="faq-content">
+                    <p>We recommend booking as early as possible, especially during peak event seasons, to ensure availability and enough time for planning and execution.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span>03</span> Do you work outside your location?</h3>
+                  <div class="faq-content">
+                    <p>Yes, depending on the project requirements and logistics, we are available to work in different locations.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span>04</span> Can I request a consultation before booking?</h3>
+                  <div class="faq-content">
+                    <p>Absolutely. We offer consultations to discuss your ideas, event goals, budget, and design preferences.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span>05</span> What is included in your set design service?</h3>
+                  <div class="faq-content">
+                    <p>Our services may include concept development, backdrop design, stage styling, décor setup, lighting coordination, and overall visual arrangement depending on the project.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span>06</span> How can I get a quote?</h3>
+                  <div class="faq-content">
+                    <p>You can contact us through the website’s contact section or social media platforms with details about your event, and we’ll provide a customized quote.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span>07</span> Do you provide setup and breakdown services?</h3>
+                  <div class="faq-content">
+                    <p>Yes, our team handles both installation and dismantling to ensure a smooth and stress-free experience for clients.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3><span>08</span> Can I see examples of your previous work?</h3>
+                  <div class="faq-content">
+                    <p>Yes. Our portfolio section showcases selected projects, photos, and videos from previous events and productions.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+            <img src="{% static 'assets/img/s4.png' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" data-nav-section="about" class="skills section" data-aos="fade-up">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6 d-flex align-items-center">
+            {% comment %} <img src="{% static 'assets/img/illustration/illustration-10.webp' %}" class="img-fluid" alt=""> {% endcomment %}
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/tyMxSAWmftg?si=ET3GQNEyQJRtKmBh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+
+            <h3>Our Skill Ratings</h3>
+            <p class="fst-italic">
+              We possess the following skills and expertise in the field of set design and event styling, which enable us to create exceptional and memorable experiences for our clients:
+            </p>
+
+            <div class="skills-content skills-animation">
+
+              <div class="progress">
+                <span class="skill"><span>Creative Set Design</span> <i class="val">98%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>Event Styling &amp; Decoration</span> <i class="val">95%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>Space Planning &amp; Execution</span> <i class="val">92%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>Concept Development &amp; Visual Storytelling</span> <i class="val">92%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Services Section -->
+    <section id="services" data-nav-section="services" class="services section light-background" data-aos="fade-up">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Services</h2>
+        <p>Our comprehensive range of services is designed to bring your vision to life and create unforgettable experiences.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-house-heart icon"></i></div>
+              <h4><a href="" class="stretched-link">Indoor Set Design (Interior Decor)</a></h4>
+              <p>Creating elegant and visually engaging indoor spaces tailored to match the theme, mood, and purpose of every event.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-tree icon"></i></div>
+              <h4><a href="" class="stretched-link">Outdoor Set Design (Exterior Decor)</a></h4>
+              <p>Designing stunning outdoor environments that combine creativity, structure, and ambiance for memorable open-air experiences.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-calendar-event icon"></i></div>
+              <h4><a href="" class="stretched-link">Event Planning</a></h4>
+              <p>Coordinating and managing every detail of an event to ensure a smooth, organized, and stress-free experience from start to finish.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-image icon"></i></div>
+              <h4><a href="" class="stretched-link">Backdrop Design and Setup</a></h4>
+              <p>Crafting custom backdrops that enhance the visual appeal of events, photoshoots, stages, and special occasions.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Work Process Section -->
+    <section id="work-process" data-nav-section="services" class="work-process section" data-aos="fade-up">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Work Process</h2>
+        <p>Our systematic approach ensures that every project is executed with precision and efficiency.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4">
+            <div class="steps-item">
+              <div class="steps-image">
+                <img src="{% static 'assets/img/steps/step_1.webp' %}" alt="Step 1" class="img-fluid" loading="lazy">
+              </div>
+              <div class="steps-content">
+                <div class="steps-number">01</div>
+                <h3>Idea &amp; Conceptualization</h3>
+                <p>We begin by understanding your vision, goals, theme, and preferences. Through creative brainstorming and planning, we develop concepts that bring your ideas to life.</p>
+                <div class="steps-features">
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Client Consultation</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Theme Development</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Creative Brainstorming</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Steps Item -->
+          </div>
+
+          <div class="col-lg-4">
+            <div class="steps-item">
+              <div class="steps-image">
+                <img src="{% static 'assets/img/steps/step_2.webp' %}" alt="Step 2" class="img-fluid" loading="lazy">
+              </div>
+              <div class="steps-content">
+                <div class="steps-number">02</div>
+                <h3>Design &amp; Planning</h3>
+                <p>Once the concept is finalized, we carefully plan the layout, styling, materials, and overall visual direction to ensure every detail aligns perfectly with the desired outcome.</p>
+                <div class="steps-features">
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Layout Planning</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Material Selection</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Logistics Coordination</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Steps Item -->
+          </div>
+
+          <div class="col-lg-4">
+            <div class="steps-item">
+              <div class="steps-image">
+                <img src="{% static 'assets/img/steps/step_3.webp' %}" alt="Step 3" class="img-fluid" loading="lazy">
+              </div>
+              <div class="steps-content">
+                <div class="steps-number">03</div>
+                <h3>Setup &amp; Final Execution</h3>
+                <p>Our team brings the design to reality through professional setup and execution, ensuring a polished and visually stunning final result ready for your event or production.</p>
+                <div class="steps-features">
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Installation</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Styling &amp; Finishing</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Final Presentation - Set Design is Ready!</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Steps Item -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Work Process Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" data-nav-section="services" class="call-to-action section dark-background">
+
+      <img src="{% static 'assets/img/bg/cta_bg.webp' %}" alt="">
+
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+          <div class="col-xl-9 text-center text-xl-start">
+            <h3>Call To Action</h3>
+            <p>Get in touch with us today and let's discuss how we can help bring your vision to life!</p>
+          </div>
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section" data-aos="fade-up">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Portfolio</h2>
+        <p>Our Portfolio showcases our diverse range of projects and the creative solutions we deliver for each client.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="row gy-4 isotope-container">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="{% static 'assets/img/portfolio/port_1.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Wedding Reception</h4>
+                <p>A beautiful and memorable wedding reception setup that exceeded the couple's expectations.</p>
+                <a href="{% static 'assets/img/portfolio/port_1.png' %}" title="Wedding Reception" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="{% static 'assets/img/portfolio/lands_1.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Engagement Ceremony</h4>
+                <p>A beautiful and memorable engagement ceremony setup that exceeded the couple's expectations.</p>
+                <a href="{% static 'assets/img/portfolio/lands_1.png' %}" title="Engagement Ceremony" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="{% static 'assets/img/portfolio/lands_2.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Club Night Party</h4>
+                <p>A vibrant and entertaining club night party setup that exceeded the guests' expectations.</p>
+                <a href="{% static 'assets/img/portfolio/lands_2.png' %}" title="Club Night Party" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="{% static 'assets/img/portfolio/lands_3.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Wedding Backdrop</h4>
+                <p>A beautiful and memorable wedding backdrop setup that exceeded the couple's expectations.</p>
+                <a href="{% static 'assets/img/portfolio/lands_3.png' %}" title="Wedding Backdrop" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="{% static 'assets/img/portfolio/port_3.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Union Blessing</h4>
+                <p>A beautiful and memorable union blessing ceremony setup that exceeded the couple's expectations.</p>
+                <a href="{% static 'assets/img/portfolio/port_3.png' %}" title="Union Blessing" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="{% static 'assets/img/portfolio/port_2.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Wedding Party</h4>
+                <p>A beautiful and memorable wedding party setup that exceeded the couple's expectations.</p>
+                <a href="{% static 'assets/img/portfolio/port_2.png' %}" title="Wedding Party" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="{% static 'assets/img/portfolio/lands_4.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Vintage Setup</h4>
+                <p>A beautiful and memorable vintage setup that exceeded the customers' expectations.</p>
+                <a href="{% static 'assets/img/portfolio/lands_4.png' %}" title="Vintage Setup" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="{% static 'assets/img/portfolio/lands_5.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Music Battle Night</h4>
+                <p>A beautiful and memorable music battle night setup that exceeded the customers' expectations.</p>
+                <a href="{% static 'assets/img/portfolio/lands_5.png' %}" title="Music Battle Night" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <img src="{% static 'assets/img/portfolio/lands_6.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>60 years Anniversary</h4>
+                <p>A beautiful and memorable anniversary setup that exceeded the customers' expectations.</p>
+                <a href="{% static 'assets/img/portfolio/lands_6.png' %}" title="60 years Anniversary" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+            
+          </div><!-- End Portfolio Container -->
+          <a href="{% url 'gallery' %}" class="btn-see-more">
+              <span>See More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section" data-aos="fade-up">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Team</h2>
+        <p>Our formidable team of experts</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/person/ceo.png' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Redeemer Goku</h4>
+                <span>CEO &amp; Founder</span>
+                <p>A well-rounded executive with extensive experience in leading strategic initiatives.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/person/admin.png' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sarah Johnson</h4>
+                <span>Administrative Assistant</span>
+                <p>A dedicated administrative assistant with a keen eye for detail and a passion for organization.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/person/team_lead.png' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>Field Work Team Lead</span>
+                <p>A skilled field work team lead with extensive experience in managing and coordinating field operations.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/person/designer.png' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Gladson Beam</h4>
+                <span>Graphic Designer</span>
+                <p>A detail-oriented graphic designer with a strong background in creating visually appealing and effective designs.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section" data-aos="fade-up">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Testimonials</h2>
+        <p>What do our clients say about us?</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/person/male.png' %}" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder, Hewlett Packard Ltd.</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>SetsByRe is a team of passionate professionals dedicated to delivering exceptional results. Their attention to detail and commitment to excellence make them the perfect choice for any project.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/person/female.png' %}" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Marketing Manager, ACS Ltd.</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>SetsByRe has been instrumental in helping us achieve our marketing goals. Their strategic approach and creative solutions have significantly impacted our brand visibility and customer engagement.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/person/female.png' %}" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Product Specialist, XYZ Corp.</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>SetsByRe has provided exceptional support in helping us develop and launch our new product line. Their expertise and dedication have been invaluable to our success.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/person/male.png' %}" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Outreach Project Manager, ABC Inc.</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>SetsByRe has been instrumental in helping us achieve our marketing goals. Their strategic approach and creative solutions have significantly impacted our brand visibility and customer engagement.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/person/male.png' %}" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>SetsByRe has been a game-changer for our business. Their innovative approach and dedication to quality have helped us achieve results we never thought possible.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Contact</h2>
+        <p>Need to get in touch? Use the form below to send us a message.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>A108 Mandela Street, Madina Lakeside, Accra-Ghana</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+233 54 701 8185</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>gokudeema@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.0601134915428!2d-0.1305134117088391!3d5.695764272552044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf83002b2d1567%3A0xb9a77f6d9655dc6b!2sSETSBYRE!5e0!3m2!1sen!2sgh!4v1779404488162!5m2!1sen!2sgh" width="480" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-success">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+            <form method="post" action="{% url 'contact' %}" class="php-email-form">
+              {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="14" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  {% comment %} <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div> {% endcomment %}
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+    <!-- Subscribe Section -->
+    <section id="subscribe" class="subscribe section" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-4 justify-content-between align-items-center">
+          <div class="col-lg-6">
+            <div class="cta-content">
+              <h2>Subscribe to our newsletter</h2>
+              <p>Need to stay updated with our latest news and offers? Subscribe to our newsletter!</p>
+              <form action="{% url 'newsletter_subscribe' %}" method="post" class="php-email-form cta-form">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                  <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address" aria-describedby="button-subscribe">
+                  <button class="btn btn-primary" type="submit" id="button-subscribe">Subscribe</button>
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+                {% if messages %}
+                  {% for message in messages %}
+                    <div class="sent-message">
+                      {{ message }}
+                    </div>
+                  {% endfor %}
+                {% endif %}
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="cta-image">
+              <img src="{% static 'assets/img/cta/cta-1.webp' %}" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Subscribe Section -->
+
+{% endblock %}

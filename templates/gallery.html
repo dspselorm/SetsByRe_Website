@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="gallery-hero">
+
+  <div class="container">
+
+    <div class="gallery-hero-content">
+
+      <h1>Our Gallery</h1>
+
+      <p>
+        Explore our creative set designs, event styling, and memorable project executions.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="gallery-page">
+
+  <!-- Gallery Grid -->
+  <div class="container">
+    <div class="row gy-4">
+
+
+      {% for item in gallery_items %}
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="{% static item.image %}" class="img-fluid" alt="">
+            <div class="gallery-info">
+              <h4>{{ item.title }}</h4>
+              <p>
+                {{ item.description }}
+                {% if item.link %}
+                  -
+                  <a href="{{ item.link }}" target="_blank">
+                    See more
+                  </a>
+                {% endif %}
+              </p>
+              <div class="row gy-4">
+              <!-- PREVIEW -->
+                <div class="request-design-wrapper col-lg-2 col-md-6">
+                  <a href="{% static item.image %}"
+                    class="glightbox preview-link"
+                    data-gallery="gallery-group">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                </div>
+                <!-- REQUEST DESIGN -->
+                <div class="request-design-wrapper col-lg-10 col-md-6">
+                  <a href="#"
+                    class="btn-getstarted request-design-btn"
+                    data-design-title="{{ item.title }}"
+                    data-design-id="{{ item.id }}"
+                    data-design-image="{% static item.image %}">
+                    Order Now
+                    <i class="bi bi-cart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+
+</section>
+
+
+<!-- Book Appointment Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Book Appointment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="text-center mb-3">
+        <img id="designPreview" src="" class="img-fluid rounded" style="max-height:200px; display:none;">
+      </div>
+
+      <div id="formError" class="text-danger mb-2" style="display:none; font-size:14px;"></div>
+      <div class="modal-body">
+
+        <input type="text" id="firstName" class="form-control mb-2" placeholder="First Name">
+        <input type="text" id="lastName" class="form-control mb-2" placeholder="Last Name">
+        <input type="email" id="email" class="form-control mb-2" placeholder="Email">
+        <input type="text" id="phone" class="form-control mb-2" placeholder="Phone Number">
+
+        <textarea id="reason" class="form-control mb-3" rows="4" placeholder="Reason for meeting"></textarea>
+
+        <div class="d-flex gap-2">
+          <button id="continueBtn" class="btn btn-primary w-100">Continue</button>
+          <button class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancel</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+document.querySelectorAll('.request-design-btn').forEach(btn => {
+
+  btn.addEventListener('click', function(e) {
+
+    e.preventDefault();
+
+    const title = this.dataset.designTitle;
+    const image = this.dataset.designImage;
+    const designId = this.dataset.designId;
+
+    // PREVIEW IMAGE
+    const preview = document.getElementById('designPreview');
+    preview.src = image;
+    preview.style.display = 'block';
+
+    // REASON FIELD
+    document.getElementById('reason').value =
+    `I will like to request a design similar to the following:
+
+    Reference on website: ${title}
+    Reference ID: ${designId}
+    Preview: ${window.location.origin}${image}`;
+
+    // CLEAR ERRORS
+    document.getElementById('formError').style.display = 'none';
+
+    // OPEN MODAL
+    const modal = new bootstrap.Modal(document.getElementById('bookingModal'));
+    modal.show();
+
+  });
+
+});
+</script>
+
+
+
+<script>
+document.getElementById('continueBtn').addEventListener('click', function () {
+
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const reason = document.getElementById('reason').value.trim();
+
+  const errorBox = document.getElementById('formError');
+
+  // VALIDATION
+  if (!firstName || !lastName || !email || !phone || !reason) {
+    errorBox.innerText = "Please fill in all fields before continuing.";
+    errorBox.style.display = "block";
+    return;
+  }
+
+  errorBox.style.display = "none";
+
+  // Calendly redirect
+  const baseUrl = "https://calendly.com/selormetse/consultancy-session";
+  const url = new URL(baseUrl);
+
+  url.searchParams.append("name", firstName + " " + lastName);
+  url.searchParams.append("email", email);
+  url.searchParams.append("a1", phone);
+  url.searchParams.append("a2", reason);
+
+  // CLOSE MODAL
+const modalElement = document.getElementById('bookingModal');
+const modalInstance = bootstrap.Modal.getInstance(modalElement);
+
+  if (modalInstance) {
+  modalInstance.hide();
+}
+
+  window.open(url.toString(), "_blank");
+
+});
+</script>
+
+{% endblock %}
