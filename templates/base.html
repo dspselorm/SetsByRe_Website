@@ -282,27 +282,27 @@
             <form id="bookingForm">
 
               <div class="mb-3">
-                <label class="form-label">First Name</label>
+                <label class="form-label">First Name *</label>
                 <input type="text" id="firstName" class="form-control" required>
               </div>
 
               <div class="mb-3">
-                <label class="form-label">Last Name</label>
+                <label class="form-label">Last Name *</label>
                 <input type="text" id="lastName" class="form-control" required>
               </div>
 
               <div class="mb-3">
-                <label class="form-label">Email Address</label>
+                <label class="form-label">Email Address *</label>
                 <input type="email" id="email" class="form-control" required>
               </div>
 
               <div class="mb-3">
-                <label class="form-label">Phone Number</label>
+                <label class="form-label">Phone Number *</label>
                 <input type="text" id="phone" class="form-control" required>
               </div>
 
               <div class="mb-3">
-                <label class="form-label">Reason for Appointment</label>
+                <label class="form-label">Reason for Appointment *</label>
                 <textarea id="reason" class="form-control" rows="4" required></textarea>
               </div>
 
@@ -338,15 +338,28 @@
         // Close modal
         const modal = bootstrap.Modal.getInstance(document.getElementById('bookingModal'));
         modal.hide();
+        document.getElementById("bookingModal").reset();
 
         // Calendly link
         const calendlyURL =
-          "https://calendly.com/selormetse/consultancy-session" +
+    "{{ calendly_url }}" +
           "?name=" + encodeURIComponent(firstName + " " + lastName) +
           "&email=" + encodeURIComponent(email) +
 
           "&a1=" + encodeURIComponent(phone) +
           "&a2=" + encodeURIComponent(reason);
+
+        // CLEAR FORM
+        document.getElementById('firstName').value = "";
+        document.getElementById('lastName').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('phone').value = "";
+        document.getElementById('reason').value = "";
+
+        document.getElementById('designPreview').src = "";
+        document.getElementById('designPreview').style.display = "none";
+
+        document.getElementById('formError').style.display = "none";
 
         // Open Calendly
         window.open(calendlyURL, '_blank');

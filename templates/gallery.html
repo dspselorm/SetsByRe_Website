@@ -170,7 +170,7 @@ document.getElementById('continueBtn').addEventListener('click', function () {
   errorBox.style.display = "none";
 
   // Calendly redirect
-  const baseUrl = "https://calendly.com/selormetse/consultancy-session";
+  const baseUrl = "{{ calendly_url }}";
   const url = new URL(baseUrl);
 
   url.searchParams.append("name", firstName + " " + lastName);
@@ -184,7 +184,19 @@ const modalInstance = bootstrap.Modal.getInstance(modalElement);
 
   if (modalInstance) {
   modalInstance.hide();
-}
+  }
+
+  // CLEAR FORM
+  document.getElementById('firstName').value = "";
+  document.getElementById('lastName').value = "";
+  document.getElementById('email').value = "";
+  document.getElementById('phone').value = "";
+  document.getElementById('reason').value = "";
+
+  document.getElementById('designPreview').src = "";
+  document.getElementById('designPreview').style.display = "none";
+
+  document.getElementById('formError').style.display = "none";
 
   window.open(url.toString(), "_blank");
 

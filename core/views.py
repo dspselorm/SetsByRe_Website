@@ -3,10 +3,13 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.urls import reverse
 from .gallery_data import gallery_items
+import os
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, "home.html", {
+        "calendly_url": os.getenv("CALENDLY_URL")
+    })
 
 
 def contact_view(request):
@@ -17,6 +20,8 @@ def contact_view(request):
         email = request.POST.get('email')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
+
+        recipient_email = os.getenv("CONTACT_RECEIVER")
 
         full_message = f"""
                         New message from SetsByRe website
@@ -32,7 +37,7 @@ def contact_view(request):
             subject,
             full_message,
             'selorm.etse5@gmail.com',
-            ['selorm.etse5@gmail.com'],
+            [recipient_email],
             fail_silently=False,
         )
 
@@ -43,13 +48,16 @@ def contact_view(request):
 
 def gallery(request):
     return render(request, 'gallery.html', {
-        "gallery_items": gallery_items
+        "gallery_items": gallery_items,
+        "calendly_url": os.getenv("CALENDLY_URL")
     })
 
 
 def newsletter_subscribe(request):
 
     if request.method == "POST":
+
+        recipient_email = os.getenv("CONTACT_RECEIVER")
 
         subscriber_email = request.POST.get("email")
 
@@ -66,7 +74,7 @@ def newsletter_subscribe(request):
             subject,
             message,
             'selorm.etse5@gmail.com',
-            ['selorm.etse5@gmail.com'],
+            [recipient_email],
             fail_silently=False,
         )
 
@@ -76,3 +84,7 @@ def newsletter_subscribe(request):
         )
 
     return redirect(f"{reverse('home')}#subscribe")
+
+context = {
+    "calendly_url": os.getenv("CALENDLY_URL")
+}
